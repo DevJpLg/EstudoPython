@@ -1,4 +1,5 @@
 import os
+
 lista = []
 while True:
     print('\n***Selecione uma opção:***')
@@ -17,12 +18,12 @@ while True:
         try:
             indice = int(apagar)
             del lista[indice]
-        except:
-            print('Não foi possível apagar esse índice!')
+        except ValueError:
+            print('Por favor digite número int.')
+        except Exception:
+            print('Erro desconhecido')
+        except IndexError:
+            print('Índice não existe na lista')
     else:
         print('Digite uma letra que seja "i", "a" e "l"!')
         continue
-
-
-
-    
